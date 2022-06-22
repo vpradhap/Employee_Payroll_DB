@@ -11,3 +11,7 @@ insert into Employee_payroll values
 
 --UC4 Retrieve data
 select * from  Employee_payroll
+
+--UC4 Retrieve  particular data
+select salary from Employee_payroll where name = 'ajay'
+select * from Employee_payroll where joining_date between CAST('2020-03-01' as date) and GETDATE()
