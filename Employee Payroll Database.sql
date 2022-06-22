@@ -21,3 +21,13 @@ alter table Employee_payroll add gender varchar(10)
 insert into Employee_payroll values 
 ('radha',50000,'2021-07-24','F')
 update Employee_payroll set gender = 'M' where name = 'prasanna' or name = 'venkatesan' or name = 'pradhap' or name = 'ajay'
+
+--UC7 sum,min,max,count,avg
+select sum(salary) as total from Employee_payroll where gender = 'M' group by gender 
+select sum(salary) as total from Employee_payroll where gender = 'F' group by gender 
+select avg(salary) as average from Employee_payroll where gender = 'M' group by gender 
+select avg(salary) as average from Employee_payroll where gender = 'F' group by gender 
+select min(salary) as mini from Employee_payroll where gender = 'M' group by gender 
+select max(salary) as maxi from Employee_payroll where gender = 'M' group by gender 
+select count(gender) as counting from Employee_payroll where gender = 'M' group by gender 
+select count(gender) as counting from Employee_payroll where gender = 'f' group by gender 
