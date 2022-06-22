@@ -31,3 +31,12 @@ select min(salary) as mini from Employee_payroll where gender = 'M' group by gen
 select max(salary) as maxi from Employee_payroll where gender = 'M' group by gender 
 select count(gender) as counting from Employee_payroll where gender = 'M' group by gender 
 select count(gender) as counting from Employee_payroll where gender = 'f' group by gender 
+
+--UC8 Extending table data
+alter table Employee_payroll add phone_no bigint,address varchar(300),department varchar(100) not null default 'developer'
+update Employee_payroll set phone_no = 1234587963,department = 'tester' where name = 'venkatesan'
+update Employee_payroll set phone_no = 1234587963,address = 'chennai',department = 'tester' where name = 'prasanna' 
+update Employee_payroll set phone_no = 1234587963,address = 'erode',department = 'lab' where name = 'ajay' 
+update Employee_payroll set phone_no = 1234587963,address = 'salem' where name = 'pradhap' 
+update Employee_payroll set phone_no = 1234587963,address = 'karur',department = 'tester' where name = 'radha' 
+select * from Employee_payroll
