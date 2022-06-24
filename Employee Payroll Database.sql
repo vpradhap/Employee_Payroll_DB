@@ -48,3 +48,7 @@ update Employee_payroll set basic_pay = 10000, deductions = 100, taxable_pay = 1
 update Employee_payroll set basic_pay = 10000, deductions = 100, taxable_pay = 1000, net_pay = 10000 - 740, income_tax = (0.12)*10000 where name = 'ajay'
 update Employee_payroll set basic_pay = 10000, deductions = 100, taxable_pay = 1000, net_pay = 10000 - 520, income_tax = (0.12)*10000 where name = 'pradhap'
 update Employee_payroll set basic_pay = 10000, deductions = 100, taxable_pay = 1000, net_pay = 10000 - 200, income_tax = (0.12)*10000 where name = 'radha'
+
+--UC10 Assigning two department for a single person
+insert into Employee_payroll values 
+('radha',50000,'2021-07-24','F',1234587963,'karur','developer',10000,100,1000,1200,9800)
