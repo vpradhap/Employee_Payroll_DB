@@ -40,3 +40,11 @@ update Employee_payroll set phone_no = 1234587963,address = 'erode',department =
 update Employee_payroll set phone_no = 1234587963,address = 'salem' where name = 'pradhap' 
 update Employee_payroll set phone_no = 1234587963,address = 'karur',department = 'tester' where name = 'radha' 
 select * from Employee_payroll
+
+--UC9 Extending table data
+alter table Employee_payroll add basic_pay float, deductions float, taxable_pay float, income_tax float, net_pay float
+update Employee_payroll set basic_pay = 10000, deductions = 100, taxable_pay = 1000, net_pay = 10000 - 420, income_tax = (0.12)*10000 where name = 'venkatesan'
+update Employee_payroll set basic_pay = 10000, deductions = 100, taxable_pay = 1000, net_pay = 10000 - 360, income_tax = (0.12)*10000 where name = 'prasanna'
+update Employee_payroll set basic_pay = 10000, deductions = 100, taxable_pay = 1000, net_pay = 10000 - 740, income_tax = (0.12)*10000 where name = 'ajay'
+update Employee_payroll set basic_pay = 10000, deductions = 100, taxable_pay = 1000, net_pay = 10000 - 520, income_tax = (0.12)*10000 where name = 'pradhap'
+update Employee_payroll set basic_pay = 10000, deductions = 100, taxable_pay = 1000, net_pay = 10000 - 200, income_tax = (0.12)*10000 where name = 'radha'
